@@ -1,0 +1,1008 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../practica13_2/">
+      
+      <link rel="icon" href="../../assets/cat.jpg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+    
+    
+      
+        <title>Prácticas 13.1 - Prácticas IAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ffa9267a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="deep-orange" data-md-color-primary="deep-orange" data-md-color-accent="green">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#iaw-practica-131-aws-cli-command-line-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Prácticas IAW" class="md-header__button md-logo" aria-label="Prácticas IAW" data-md-component="logo">
+      
+  <img src="../../assets/cat.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prácticas IAW
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prácticas 13.1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="deep-orange" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/aben086/mk-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aben086/mk-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Prácticas 13
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Prácticas IAW" class="md-nav__button md-logo" aria-label="Prácticas IAW" data-md-component="logo">
+      
+  <img src="../../assets/cat.jpg" alt="logo">
+
+    </a>
+    Prácticas IAW
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/aben086/mk-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aben086/mk-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Prácticas 13
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Prácticas 13
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Práctica 13.1
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica13_2/" class="md-nav__link">
+        Práctica 13.2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica13_3/" class="md-nav__link">
+        Práctica 13.3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica13_4/" class="md-nav__link">
+        Práctica 13.4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica13_5/" class="md-nav__link">
+        Práctica 13.5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/aben086/mk-docs/edit/master/docs/practicas13/practica13_1.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/aben086/mk-docs/raw/master/docs/practicas13/practica13_1.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="iaw-practica-131-aws-cli-command-line-interface">IAW - Práctica 13.1 AWS CLI (Command Line Interface)</h1>
+<p><img alt="" src="../../assets/pr131/awscli.png" />
+<a href="https://docs.aws.amazon.com/es_es/cli/index.html">AWS CLI (Command Line Interface)</a> es una herramienta de línea de comandos que permite a los usuarios interactuar con los servicios de AWS desde la terminal de su ordenador. Con <a href="https://docs.aws.amazon.com/es_es/cli/index.html">AWS CLI</a>, los usuarios pueden acceder y administrar una amplia variedad de recursos de AWS, incluidos los servicios de cómputo, almacenamiento, bases de datos, redes, seguridad y mucho más. La AWS CLI es compatible con Windows, Linux y macOS, y se puede instalar fácilmente a través de un gestor de paquetes como pip. Además, se puede utilizar en scripts para automatizar tareas en AWS y en aplicaciones que se ejecutan en AWS.</p>
+<h1 id="12-instalacion-de-aws-cli">1.2 Instalación de AWS CLI</h1>
+<ul>
+<li>Linux</li>
+<li>macOS</li>
+<li>Windows</li>
+<li>Docker</li>
+</ul>
+<p>Se recomienda consultar la <a href="https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html">documentación oficial</a> para obtener los detalles de la instalación para cada una de las opciones disponibles.</p>
+<h2 id="121-instalacion-en-linux">1.2.1 Instalación en Linux</h2>
+<p>Para realizar la instalación de AWS CLI en un sistema operativo Linux sobre una arquitectura x86 de 64 bits, tenemos que ejcutar los siguientes comandos.</p>
+<p><strong>Paso 1.</strong> Descargamos un archivo .zip con la aplicación AWS CLI.</p>
+<pre><code>curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+</code></pre>
+<p><strong>Paso 2.</strong> Descomprimimos el archivo que acabamos de descargar.</p>
+<pre><code>unzip awscliv2.zip
+</code></pre>
+<p><strong>Paso 3.</strong> Ejectuamos el script de instalación.</p>
+<pre><code>sudo ./aws/install
+</code></pre>
+<p><strong>Paso 4.</strong> Comprobamos que la instalación se ha realizado de forma correcta.</p>
+<pre><code>aws --version
+</code></pre>
+<h2 id="122-instalacion-en-macos">1.2.2 Instalación en macOS</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html#cliv2-mac-install-cmd">Instalación de AWS CLI desde la interfaz de usuario.</a></li>
+<li><a href="https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html#cliv2-mac-install-cmd">Instalación de AWS CLI desde la línea de comandos.</a></li>
+</ul>
+<h2 id="123-instalacion-en-windows">1.2.3 Instalación en Windows</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html#cliv2-mac-install-cmd">Instalación de AWS CLI desde la interfaz de usuario.</a></li>
+</ul>
+<h1 id="13-configuracion-de-aws-cli">1.3 Configuración de AWS CLI</h1>
+<h2 id="131-opcion-1-con-el-comando-aws-configure">1.3.1 Opción 1. Con el comando <code>aws configure</code></h2>
+<p>Para configurar AWS CLI ejecutaremos el siguiente comando.</p>
+<pre><code>aws configure
+</code></pre>
+<p>Este comando preguntará por los siguientes datos:</p>
+<pre><code>AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
+Default region name [None]: 
+Default output format [None]:
+</code></pre>
+<p>Con los que creará un archivo de texto llamado <code>credentials</code> dentro del directorio home del usuario.
+* En Linux se encuentra en la ruta <code>~/.aws/credentials</code>.
+* En Windows estará en la ruta: <code>C:\Users\usuario\.aws\credentials</code>.</p>
+<h2 id="131-opcion-2-copiando-el-contenido-del-archivo-credentials-de-aws-academy">1.3.1 Opción 2. Copiando el contenido del archivo <code>credentials</code> de AWS Academy.</h2>
+<p>Si queremos utilizar las credenciales de <strong>AWS Academy</strong> solo tenemos que copiar en el archivo ~/.aws/credentials los datos que nos aparecen en el apartado <strong>AWS Details</strong> -&gt; <strong>Cloud Access</strong> -&gt; <strong>AWS CLI</strong>, dentro del <strong>Learner Lab</strong> de AWS Academy.</p>
+<p><strong>Ejemplo de un archivo <code>credentials</code></strong>.</p>
+<pre><code>[default]
+aws_access_key_id=BSICYBW38QHVAVV7P365
+aws_secret_access_key=DE/CB2FGCx8EV34x0EtuZfJg39E7hapZ9suhXBzF
+aws_session_token=FwoGZXIvYXdzECkaDAGFN5okYCHateFXISK9AYwT4gghzz5hIr6TZs9X8pQaOYPZvTCNSrLtJoaw/fEwz9...XBzH
+</code></pre>
+<p>Para <strong>configurar la región de AWS a utilizar</strong> y el <strong>formato de salida</strong> se puede ejecutar el comando <code>aws configure</code> de nuevo o abrir el archivo <code>config</code> dentro del directorio <code>.aws</code> y agregar los siguientes datos:</p>
+<ul>
+<li>Región: <code>us-east-1</code></li>
+<li>Formato de salida: <code>json</code></li>
+</ul>
+<p><strong>Ejemplo de un archivo <code>config</code></strong>.</p>
+<pre><code>[default]
+region = us-east-1
+output = json
+</code></pre>
+<h1 id="14-ejercicios">1.4 Ejercicios</h1>
+<h2 id="estructura">Estructura</h2>
+<pre><code class="language-txt">├── Ejercicio01
+│   ├── scripts
+│   │   └── create_sg.sh
+│   └── variables
+│       └── vars.sh
+├── Ejercicio02
+│   ├── scripts
+│   │   └── run_instance.sh
+│   └── variables
+│       └── vars.sh
+├── Ejercicio03
+│   ├── scripts
+│   │   ├── eliminar_practica9.sh
+│   │   └── montar_practica9.sh
+│   └── variables
+│       └── vars.sh
+├── Ejercicio04
+│   ├── scripts
+│   │   ├── 00-terminate_all_instances.sh
+│   │   ├── 01-delete_all_security_groups.sh
+│   │   ├── 02-delete_all_elastic_ips.sh
+│   │   ├── 03-create_security_groups.sh
+│   │   ├── 04-create_instances.sh
+│   │   ├── 05-create_elastic_ip.sh
+│   │   └── user-data.sh
+│   └── variables
+│       └── vars.sh
+├── Ejercicio05
+│   └── scripts
+│       └── mostrar_info.sh
+├── img
+│   └── logo.png
+└── README.md
+</code></pre>
+<h2 id="141-ejercicio-1">1.4.1 Ejercicio 1</h2>
+<ul>
+<li>Crea un grupo de seguridad para las máquinas del Backend con el nombre backend-sg.</li>
+<li>Añada las siguientes reglas al grupo de seguridad:<ul>
+<li>Acceso SSH (puerto 22/TCP) desde cualquier dirección IP.</li>
+<li>Acceso al puerto 3306/TCP desde cualquier dirección IP.</li>
+</ul>
+</li>
+</ul>
+<p>Solución:</p>
+<pre><code class="language-bash">#!/bin/bash
+set -x
+# ----------------------------------------------------------------------
+# Variables de Configuración
+# ----------------------------------------------------------------------
+source &quot;$(dirname &quot;${BASH_SOURCE[0]}&quot;)/../variables/vars.sh&quot;
+
+
+# Deshabilitamos la paginación de la salida de los comandos de AWS CLI
+# Referencia: https://docs.aws.amazon.com/es_es/cli/latest/userguide/cliv2-migration.html#cliv2-migration-output-pager
+export AWS_PAGER=&quot;&quot;
+
+# Creamos el grupo de seguridad: backend-sg
+aws ec2 create-security-group \
+    --group-name $GROUP_NAME \
+    --description &quot;Grupo de Seguridad $GROUP_NAME para maquinas Backend&quot;
+
+# Creamos una regla de accesso SSH desde cualquier IP
+aws ec2 authorize-security-group-ingress \
+    --group-name $GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_01 \
+    --cidr $NETWORK_01
+
+# Creamos una regla de accesso para el puerto 3306 desde cualquier IP
+aws ec2 authorize-security-group-ingress \
+    --group-name $GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_02 \
+    --cidr $NETWORK_01
+</code></pre>
+<h2 id="142-ejercicio-2">1.4.2 Ejercicio 2</h2>
+<ul>
+<li>
+<p>Crea una instancia EC2 para la máquina del Backend con las siguientes características.</p>
+<ul>
+<li>Identificador de la AMI: ami-08e637cea2f053dfa. Esta AMI se corresponde con la imagen Red Hat Enterprise Linux 9 (HVM).</li>
+<li>Número de instancias: 1</li>
+<li>Tipo de instancia: t2.micro</li>
+<li>Clave privada: vockey</li>
+<li>Grupo de seguridad: * backend-sg</li>
+<li>Nombre de la instancia: backend</li>
+</ul>
+</li>
+</ul>
+<p>Solución:</p>
+<pre><code class="language-bash">#!/bin/bash
+set -x
+# ----------------------------------------------------------------------
+# Variables de Configuración
+# ----------------------------------------------------------------------
+source &quot;$(dirname &quot;${BASH_SOURCE[0]}&quot;)/../variables/vars.sh&quot;
+
+# Deshabilitamos la paginación de la salida de los comandos de AWS CLI
+# Referencia: https://docs.aws.amazon.com/es_es/cli/latest/userguide/cliv2-migration.html#cliv2-migration-output-pager
+export AWS_PAGER=&quot;&quot;
+
+# Creamos una intancia EC2 con el Identificador AMI correspondiente a Red Hat Enterprise Linux 9.
+aws ec2 run-instances \
+    --image-id $AMI_ID \
+    --instance-type $INSTANCE_TYPE \
+    --key-name $KEY_NAME \
+    --security-group-ids $SECURITY_GROUP_BACKEND \
+    --count $COUNT \
+    --tag-specifications &quot;ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE_NAME_BACKEND}]&quot;
+</code></pre>
+<h2 id="143-ejercicio-3">1.4.3 Ejercicio 3</h2>
+<ul>
+<li>Crear un script para crear la infraestructura de la práctica 9.</li>
+<li>Crear un script para eliminar la infraestructura de la práctica 9.</li>
+</ul>
+<p>Solución para montar la infraestructura:</p>
+<pre><code class="language-bash">#!/bin/bash
+set -x
+# ----------------------------------------------------------------------
+# Variables de Configuración
+# ----------------------------------------------------------------------
+source &quot;$(dirname &quot;${BASH_SOURCE[0]}&quot;)/../variables/vars.sh&quot;
+
+# Deshabilitamos la paginación de la salida de los comandos de AWS CLI
+# Referencia: https://docs.aws.amazon.com/es_es/cli/latest/userguide/cliv2-migration.html#cliv2-migration-output-pager
+export AWS_PAGER=&quot;&quot;
+
+##################################################################################################################################
+
+# Creamos el grupo de seguridad: FrontEndSecurityGroup
+aws ec2 create-security-group \
+    --group-name $FRONTEND_GROUP_NAME \
+    --description &quot;Grupo de Seguridad $FRONTEND_GROUP_NAME para maquinas FrontEnd.&quot;
+
+# Creamos una regla de accesso SSH desde cualquier IP
+aws ec2 authorize-security-group-ingress \
+    --group-name $FRONTEND_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_01_FRONTEND \
+    --cidr $NETWORK_01
+
+# Creamos una regla de accesso para el puerto HTTP
+aws ec2 authorize-security-group-ingress \
+    --group-name $FRONTEND_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_02_FRONTEND \
+    --cidr $NETWORK_01
+
+##################################################################################################################################
+
+# Creamos el grupo de seguridad: BackEndSecurityGroup
+aws ec2 create-security-group \
+    --group-name $BACKEND_GROUP_NAME \
+    --description &quot;Grupo de Seguridad $BACKEND_GROUP_NAME para maquinas BackEnd.&quot;
+
+# Creamos una regla de accesso SSH desde cualquier IP
+aws ec2 authorize-security-group-ingress \
+    --group-name $BACKEND_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_01_BACKEND \
+    --cidr $NETWORK_01
+
+# Creamos una regla de accesso para el puerto 3306 desde cualquier IP
+aws ec2 authorize-security-group-ingress \
+    --group-name $BACKEND_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_02_BACKEND \
+    --cidr $NETWORK_01
+##################################################################################################################################
+
+# Creamos el grupo de seguridad: NFS
+aws ec2 create-security-group \
+    --group-name $NFS_GROUP_NAME \
+    --description &quot;Grupo de Seguridad $NFS_GROUP_NAME para maquinas servidor NFS.&quot;
+
+# Creamos una regla de accesso SSH
+aws ec2 authorize-security-group-ingress \
+    --group-name $NFS_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_01_NFS \
+    --cidr $NETWORK_01
+
+# Creamos una regla de accesso para MySQL
+aws ec2 authorize-security-group-ingress \
+    --group-name $NFS_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_02_NFS \
+    --cidr $NETWORK_01
+
+##################################################################################################################################
+
+# Creamos el grupo de seguridad: BALANCEADOR
+aws ec2 create-security-group \
+    --group-name $LOADBALANCER_GROUP_NAME \
+    --description &quot;Grupo de Seguridad $LOADBALANCER_GROUP_NAME para maquinas Balanceador de carga.&quot;
+
+# Creamos una regla de accesso SSH
+aws ec2 authorize-security-group-ingress \
+    --group-name $LOADBALANCER_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_01_LOAD_BALANCER \
+    --cidr $NETWORK_01
+
+# Creamos una regla de accesso HTTP
+aws ec2 authorize-security-group-ingress \
+    --group-name $LOADBALANCER_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_02_LOAD_BALANCER \
+    --cidr $NETWORK_01
+
+# Creamos una regla de accesso HTTPS
+aws ec2 authorize-security-group-ingress \
+    --group-name $LOADBALANCER_GROUP_NAME \
+    --protocol $PROTOCOL_01 \
+    --port $PORT_03_LOAD_BALANCER \
+    --cidr $NETWORK_01
+
+######################################                      Instancias                      ##########################################################
+
+# Creamos una intancia EC2 Balanceador de carga.
+aws ec2 run-instances \
+    --image-id $AMI_ID \
+    --instance-type $INSTANCE_TYPE02 \
+    --key-name $KEY_NAME \
+    --security-group-ids $LOADBALANCER_GROUP_NAME \
+    --count $COUNT \
+    --tag-specifications &quot;ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE_NAME_LOADBALANCER}]&quot;
+
+##################################################################################################################################
+
+# Creamos una intancia EC2 FrontEnd01.
+aws ec2 run-instances \
+    --image-id $AMI_ID \
+    --instance-type $INSTANCE_TYPE01 \
+    --key-name $KEY_NAME \
+    --security-group-ids $FRONTEND_GROUP_NAME \
+    --count $COUNT \
+    --tag-specifications &quot;ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE_NAME_FRONTEND01}]&quot;
+
+##################################################################################################################################
+
+# Creamos una intancia EC2 FrontEnd02.
+aws ec2 run-instances \
+    --image-id $AMI_ID \
+    --instance-type $INSTANCE_TYPE01 \
+    --key-name $KEY_NAME \
+    --security-group-ids $FRONTEND_GROUP_NAME \
+    --count $COUNT \
+    --tag-specifications &quot;ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE_NAME_FRONTEND02}]&quot;
+
+##################################################################################################################################
+
+# Creamos una intancia EC2 BackEnd.
+aws ec2 run-instances \
+    --image-id $AMI_ID \
+    --instance-type $INSTANCE_TYPE02 \
+    --key-name $KEY_NAME \
+    --security-group-ids $BACKEND_GROUP_NAME \
+    --count $COUNT \
+    --tag-specifications &quot;ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE_NAME_BACKEND}]&quot;
+
+##################################################################################################################################
+
+# Creamos una intancia EC2 Servidor NFS.
+aws ec2 run-instances \
+    --image-id $AMI_ID \
+    --instance-type $INSTANCE_TYPE02 \
+    --key-name $KEY_NAME \
+    --security-group-ids $NFS_GROUP_NAME \
+    --count $COUNT \
+    --tag-specifications &quot;ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE_NAME_NFS}]&quot;
+
+##################################################################################################################################
+
+sleep 15
+
+# Obtenemos el Id de la instancia a partir de su nombre
+INSTANCE_ID=$(aws ec2 describe-instances \
+            --filters &quot;Name=tag:Name,Values=$INSTANCE_NAME_LOADBALANCER&quot; \
+                      &quot;Name=instance-state-name,Values=running&quot; \
+            --query &quot;Reservations[*].Instances[*].InstanceId&quot; \
+            --output text)
+
+# Creamos una IP elástica
+ELASTIC_IP=$(aws ec2 allocate-address --query PublicIp --output text)
+
+# Asociamos la IP elástica a la instancia del balanceador
+aws ec2 associate-address --instance-id $INSTANCE_ID --public-ip $ELASTIC_IP
+</code></pre>
+<p>Solución para eliminar la infraestructura:</p>
+<pre><code class="language-bash">#!/bin/bash
+set -x
+# ----------------------------------------------------------------------
+# Variables de Configuración
+# ----------------------------------------------------------------------
+source &quot;$(dirname &quot;${BASH_SOURCE[0]}&quot;)/../variables/vars.sh&quot;
+
+# Deshabilitamos la paginación de la salida de los comandos de AWS CLI
+# Referencia: https://docs.aws.amazon.com/es_es/cli/latest/userguide/cliv2-migration.html#cliv2-migration-output-pager
+export AWS_PAGER=&quot;&quot;
+
+# Eliminar instancias en ejecución con los siguientes nombres
+names=(&quot;$INSTANCE_NAME_FRONTEND01&quot; &quot;$INSTANCE_NAME_FRONTEND02&quot; &quot;$INSTANCE_NAME_BACKEND&quot; &quot;$INSTANCE_NAME_NFS&quot; &quot;$INSTANCE_NAME_LOADBALANCER&quot;)
+
+for name in &quot;${names[@]}&quot;; do
+    instance_id=$(aws ec2 describe-instances \
+        --filters &quot;Name=tag:Name,Values=$name&quot; &quot;Name=instance-state-name,Values=running&quot; \
+        --query 'Reservations[*].Instances[*].[InstanceId]' --output text)
+
+    if [ -z &quot;$instance_id&quot; ]; then
+        echo &quot;No se encontraron instancias en ejecución con el nombre $name&quot;
+        continue
+    fi
+
+    # Obtiene el ID de la IP elástica asociada a la instancia
+    EIP_ID=$(aws ec2 describe-addresses --filters &quot;Name=instance-id,Values=$instance_id&quot; --query &quot;Addresses[].AllocationId&quot; --output text)
+    # Elimina la IP elástica
+    aws ec2 release-address --allocation-id $EIP_ID
+
+    echo &quot;Eliminando instancia en ejecución con el nombre $name y ID $instance_id...&quot;
+    aws ec2 terminate-instances --instance-ids $instance_id
+
+done
+
+# Esperar 25 segundos
+echo &quot;Esperando 25 segundos...&quot;
+sleep 25
+
+# Eliminar grupos de seguridad
+security_groups=($FRONTEND_GROUP_NAME $BACKEND_GROUP_NAME $NFS_GROUP_NAME $LOADBALANCER_GROUP_NAME)
+
+for security_group in &quot;${security_groups[@]}&quot;; do
+    group_id=$(aws ec2 describe-security-groups \
+        --filters &quot;Name=group-name,Values=$security_group&quot; \
+        --query 'SecurityGroups[*].[GroupId]' --output text)
+
+    if [ -z &quot;$group_id&quot; ]; then
+        echo &quot;No se encontró ningún grupo de seguridad con el nombre $security_group&quot;
+        continue
+    fi
+
+    echo &quot;Eliminando grupo de seguridad con el nombre $security_group y ID $group_id...&quot;
+    aws ec2 delete-security-group --group-id $group_id
+done
+</code></pre>
+<h2 id="144-ejercicio-4">1.4.4 Ejercicio 4</h2>
+<p>Modifique los scripts del repositorio de ejemplo:</p>
+<ul>
+<li>https://github.com/josejuansanchez/practica-aws-cli</li>
+</ul>
+<p>para que utilicen la siguiente AMI.</p>
+<ul>
+<li>Nombre de la AMI: Ubuntu Server 22.04 LTS (HVM).</li>
+<li>Identificador de la AMI: ami-06878d265978313ca.</li>
+</ul>
+<p>También tendrá que modificar los scripts para que se ejecute el siguiente comando en las instancias durante el inicio.</p>
+<pre><code>$ sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre>
+<p>Solución:</p>
+<p>Añadir la siguiente línea a los scripts del repositorio de ejemplo:</p>
+<pre><code>--user-data file://user-data.sh
+</code></pre>
+<p>Donde <code>user-data.sh</code> es un archivo de script para shell con el siguiente código:</p>
+<pre><code class="language-bash">#!/bin/bash
+set -x
+# Actualización de repositorios.
+apt update &amp;&amp; sudo apt upgrade -y
+</code></pre>
+<h2 id="145-ejercicio-5">1.4.5 Ejercicio 5</h2>
+<p>Escriba un script de bash que muestre el nombre de todas instancias EC2 que tiene en ejecución junto a su dirección IP pública.</p>
+<p>Solución:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Obtener las IDs de todas las instancias EC2 en ejecución
+instance_ids=$(aws ec2 describe-instances --filters &quot;Name=instance-state-name,Values=running&quot; --query &quot;Reservations[*].Instances[*].InstanceId&quot; --output text)
+
+# Para cada ID de instancia, obtener su nombre y dirección IP pública
+for instance_id in $instance_ids
+do
+  name=$(aws ec2 describe-tags --filters &quot;Name=resource-id,Values=$instance_id&quot; &quot;Name=key,Values=Name&quot; --query &quot;Tags[0].Value&quot; --output text)
+  public_ip=$(aws ec2 describe-instances --instance-ids $instance_id --query &quot;Reservations[0].Instances[0].PublicIpAddress&quot; --output text)
+
+  # Imprimir el nombre y la dirección IP pública de la instancia
+  echo &quot;$name: $public_ip&quot;
+done
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Inicio" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Inicio
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../practica13_2/" class="md-footer__link md-footer__link--next" aria-label="Next: Práctica 13.2" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Práctica 13.2
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
+</html>
