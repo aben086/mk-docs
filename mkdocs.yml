@@ -1,0 +1,59 @@
+site_name: Prácticas IAW
+
+  # Repositorio
+repo_name: aben086/mk-docs
+repo_url: https://github.com/aben086/mk-docs
+icon:
+    repo: fontawesome/brands/github
+
+theme:
+  name: material
+  font:
+    text: Roboto Mono
+  logo: assets/cat.jpg
+  favicon: assets/cat.jpg
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+
+  palette:
+    # Palette toggle for light mode
+    - scheme: deep orange
+      primary: deep orange
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+# Árbol de páginas
+nav:
+  - Inicio: index.md
+  - Prácticas 13: 
+      - Práctica 13.1: practicas13/practica13_1.md
+      - Práctica 13.2: practicas13/practica13_2.md
+      - Práctica 13.3: practicas13/practica13_3.md
+      - Práctica 13.4: practicas13/practica13_4.md
+      - Práctica 13.5: practicas13/practica13_5.md
